@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Button(props){
     return <TouchableOpacity style={styles.button}
-            onPress={() => props.navigation.navigate(props.screen, {data: props.data ? props.data: []})}>
+            onPress={() => props.navigation.navigate(props.screen)}>
                 {props.image && <Image source={props.image} style={styles.image}></Image>}
                 <Text style={styles.text}>{props.text}</Text>
             </TouchableOpacity>
@@ -14,19 +14,20 @@ const styles = StyleSheet.create({
         margin: "2%",
         flex: 1,
         alignItems: 'center',
-        backgroundColor: 'rgba(52, 52, 52, 0.3)',
+        backgroundColor: '#ffeeeeee',
         justifyContent: 'flex-start',
         flexDirection: 'row',
         height: 80,
         padding: "3%",
-        borderWidth: 1,
     },
     text: {
         marginLeft: 10,
-        color: "white",
     },
     image: {
-        width: 60,
-        height: 60,
+        width: 70,
+        height: 70,
+        
     }
 });
+
+
